@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>台南兩天一夜遊</title>
+</head>
+<body style="text-align:center;">
+  <h1>台南兩天一夜遊</h1>
+  <p>日期：2026/09/05 ~ 2026/09/06</p>
+  
+  <!-- 倒數顯示區 -->
+  <p id="countdown" style="color:blue; font-size:18px;"></p>
+
+  <!-- Google 行事曆按鈕 -->
+  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=台南兩天一夜遊&dates=20260905T000000Z/20260906T000000Z&details=查看行程網站：http://localhost/travel" target="_blank">
+    <button style="padding:10px 20px; font-size:16px;">加入 Google 行事曆</button>
+  </a>
+
+  <script>
+    const startDate = new Date("2026-09-05T00:00:00");
+    const endDate = new Date("2026-09-06T23:59:59");
+    const countdownElement = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date();
+
+      if (now < startDate) {
+        // 計算剩餘時間
+        const diffTime = startDate - now;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const diffHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const diffMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+        countdownElement.textContent = `距離旅行開始還有 ${diffDays} 天 ${diffHours} 小時 ${diffMinutes} 分鐘`;
+      } else if (now >= startDate && now <= endDate) {
+        countdownElement.textContent = "旅行正在進行中！";
+      } else {
+        countdownElement.textContent = "旅行已結束";
+      }
+    }
+
+    // 每分鐘更新一次倒數
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+  </script>
+</body>
+</html>
