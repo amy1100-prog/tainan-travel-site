@@ -53,12 +53,24 @@
     }
     .day-section {
       flex: 1 1 45%;
-      background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
       padding: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: left;
+      transition: background-color 0.3s ease;
+    }
+    .day1 {
+      background-color: #e6f2ff; /* 淡藍色 */
+    }
+    .day1:hover {
+      background-color: #cce6ff; /* hover 深藍 */
+    }
+    .day2 {
+      background-color: #e6ffe6; /* 淡綠色 */
+    }
+    .day2:hover {
+      background-color: #ccffcc; /* hover 深綠 */
     }
     .day-section h2 {
       border-left: 5px solid #007BFF;
@@ -73,12 +85,6 @@
     .card p {
       margin: 5px 0 10px;
       color: #555;
-    }
-    .card img {
-      width: 80%;   /* 縮小圖片 */
-      border-radius: 6px;
-      display: block;
-      margin: 0 auto;
     }
     a.activity-link {
       color: #007BFF;
@@ -108,24 +114,22 @@
   <!-- Day1 & Day2 並排 -->
   <div class="day-container">
     <!-- Day 1 -->
-    <div class="day-section" id="day1">
+    <div class="day-section day1" id="day1">
       <h2>Day 1 (9/5)</h2>
       <div class="card">
         <h3><a class="activity-link" href="http://www.caoji.com.tw/caiji/index.php?page=product_shop&p_id=176814" target="_blank">艸祭 — 住宿 (四人房型)</a></h3>
         <p>時間：19:00</p>
         <p>地址：<a href="https://maps.google.com/?q=艸祭Bookinn 台南市中西區民族路二段318號" target="_blank">台南市中西區民族路二段318號</a></p>
-        <img src="images/caiji-room.jpg" alt="艸祭四人房型">
       </div>
     </div>
 
     <!-- Day 2 -->
-    <div class="day-section" id="day2">
+    <div class="day-section day2" id="day2">
       <h2>Day 2 (9/6)</h2>
       <div class="card">
         <h3><a class="activity-link" href="https://www.chimeimuseum.org/event/691aeece01a23" target="_blank">奇美博物館 — VR 體驗</a></h3>
         <p>時間：16:00–16:30</p>
         <p>地址：<a href="https://maps.google.com/?q=奇美博物館 台南市仁德區文華路二段66號" target="_blank">台南市仁德區文華路二段66號</a></p>
-        <img src="https://www.chimeimuseum.org/uploads/photos/shares/691aef48c8b43.jpg" alt="奇美博物館 VR 體驗">
       </div>
     </div>
   </div>
