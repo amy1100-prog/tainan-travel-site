@@ -9,6 +9,11 @@
       font-family: sans-serif;
       background-color: #fafafa;
     }
+    #countdown {
+      margin: 20px auto;
+      font-size: 18px;
+      color: blue;
+    }
     .summary {
       margin: 20px auto;
       width: 80%;
@@ -60,26 +65,28 @@
       padding-left: 10px;
       color: #333;
     }
-    .card img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 10px;
-    }
     .card h3 {
       margin: 0 0 10px;
       font-size: 18px;
       color: #007BFF;
     }
     .card p {
-      margin: 5px 0;
+      margin: 5px 0 15px;
       color: #555;
     }
-    iframe {
-      width: 100%;
+    .card-content {
+      display: flex;
+      gap: 10px;
+    }
+    .card-content img {
+      width: 50%;
+      border-radius: 6px;
+    }
+    .card-content iframe {
+      width: 50%;
       height: 200px;
       border: 0;
       border-radius: 6px;
-      margin-top: 10px;
     }
     a.activity-link {
       color: #007BFF;
@@ -94,6 +101,9 @@
   <h1>台南兩天一夜遊</h1>
   <p>日期：2026/09/05 ~ 2026/09/06</p>
   
+  <!-- 倒數顯示區 -->
+  <p id="countdown"></p>
+
   <!-- 行程摘要區塊 -->
   <div class="summary">
     <h2>行程摘要</h2>
@@ -103,19 +113,18 @@
     </ul>
   </div>
 
-  <!-- 倒數顯示區 -->
-  <p id="countdown" style="color:blue; font-size:18px;"></p>
-
   <!-- Day1 & Day2 並排 -->
   <div class="day-container">
     <!-- Day 1 -->
     <div class="day-section" id="day1">
       <h2>Day 1 (9/5)</h2>
       <div class="card">
-        <img src="images/caiji-room.jpg" alt="艸祭四人房型">
         <h3><a class="activity-link" href="http://www.caoji.com.tw/caiji/index.php?page=product_shop&p_id=176814" target="_blank">艸祭 — 住宿 (四人房型)</a></h3>
         <p>時間：19:00</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9312648174055!2d120.20225807588072!3d22.989554917558397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767d5997e87f%3A0x8674e82b188d84e7!2z6Im456WtQm9vayBpbm4!5e0!3m2!1szh-TW!2sus!4v1785465322688!5m2!1szh-TW!2sus" allowfullscreen="" loading="lazy"></iframe>
+        <div class="card-content">
+          <img src="images/caiji-room.jpg" alt="艸祭四人房型">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen="" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
 
@@ -123,10 +132,12 @@
     <div class="day-section" id="day2">
       <h2>Day 2 (9/6)</h2>
       <div class="card">
-        <img src="https://www.chimeimuseum.org/uploads/photos/shares/691aef48c8b43.jpg" alt="奇美博物館 VR 體驗">
         <h3><a class="activity-link" href="https://www.chimeimuseum.org/event/691aeece01a23" target="_blank">奇美博物館 — VR 體驗</a></h3>
         <p>時間：16:00–16:30</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.4251174367864!2d120.22345187587956!3d22.93456571960558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e747aaaaaaaab%3A0xa88c13e665c7f4a6!2z5aWH576O5Y2a54mp6aSo!5e0!3m2!1szh-TW!2sus!4v1785465418778!5m2!1szh-TW!2sus" allowfullscreen="" loading="lazy"></iframe>
+        <div class="card-content">
+          <img src="https://www.chimeimuseum.org/uploads/photos/shares/691aef48c8b43.jpg" alt="奇美博物館 VR 體驗">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen="" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
   </div>
