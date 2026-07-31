@@ -1,3 +1,102 @@
+Skip to content
+amy1100-prog
+tainan-travel-site
+Repository navigation
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security and quality
+Insights
+Settings
+Files
+Go to file
+t
+T
+images
+index.html
+tainan-travel-site
+/
+index.html
+in
+main
+
+Edit
+
+Preview
+Indent mode
+
+Spaces
+Indent size
+
+2
+Line wrap mode
+
+No wrap
+Editing index.html file contents
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -60,109 +159,5 @@
     .day-section {
       flex: 1 1 45%;
       border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-align: left;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-    }
-    .day1 {
-      background-color: #e6f2ff; /* 淡藍色 */
-    }
-    .day1:hover {
-      background-color: #cce6ff; /* hover 深藍 */
-      border-color: #3399ff;
-    }
-    .day2 {
-      background-color: #e6ffe6; /* 淡綠色 */
-    }
-    .day2:hover {
-      background-color: #ccffcc; /* hover 深綠 */
-      border-color: #33cc33;
-    }
-    .day-section h2 {
-      border-left: 5px solid #007BFF;
-      padding-left: 10px;
-      color: #333;
-    }
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      color: #007BFF;
-    }
-    .card p {
-      margin: 5px 0 10px;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-  <h1>台南兩天一夜遊</h1>
-  <p>日期：2026/09/05 ~ 2026/09/06</p>
-  
-  <!-- 倒數顯示區 -->
-  <p id="countdown"></p>
-
-  <!-- 行程摘要區塊 -->
-  <div class="summary">
-    <h2>行程摘要</h2>
-    <ul>
-      <li><strong>Day 1 (9/5)：</strong> 艸祭 — 住宿 (四人房型)</li>
-      <li><strong>Day 2 (9/6)：</strong> 奇美博物館 — VR 體驗 (16:00–16:30)</li>
-    </ul>
-    <!-- 整個行程加入 Google Calendar (全天事件) -->
-    <a class="calendar-button" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=台南兩天一夜遊&dates=20260905/20260907&details=完整行程請見：https://amy1100-prog.github.io/tainan-travel-site/&location=台南市" target="_blank">
-      ➕ 整個行程加入 Google 行事曆
-    </a>
-  </div>
-
-  <!-- Day1 & Day2 並排 -->
-  <div class="day-container">
-    <!-- Day 1 -->
-    <div class="day-section day1" id="day1">
-      <h2>Day 1 (9/5)</h2>
-      <div class="card">
-        <h3>艸祭 — 住宿 (四人房型)</h3>
-        <p>時間：19:00</p>
-        <p>地址：台南市中西區民族路二段318號</p>
-      </div>
-    </div>
-
-    <!-- Day 2 -->
-    <div class="day-section day2" id="day2">
-      <h2>Day 2 (9/6)</h2>
-      <div class="card">
-        <h3>奇美博物館 — VR 體驗</h3>
-        <p>時間：16:00–16:30</p>
-        <p>地址：台南市仁德區文華路二段66號</p>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const startDate = new Date("2026-09-05T00:00:00");
-    const endDate = new Date("2026-09-06T23:59:59");
-    const countdownElement = document.getElementById("countdown");
-
-    function updateCountdown() {
-      const now = new Date();
-
-      if (now < startDate) {
-        const diffTime = startDate - now;
-        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-        const diffHours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
-        const diffMinutes = Math.floor((diffTime / (1000 * 60)) % 60);
-        const diffSeconds = Math.floor((diffTime / 1000) % 60);
-        countdownElement.textContent = `距離出發還有 ${diffDays} 天 ${diffHours} 小時 ${diffMinutes} 分鐘 ${diffSeconds} 秒`;
-      } else if (now >= startDate && now <= endDate) {
-        countdownElement.textContent = "行程進行中！好好享受旅遊吧 🎉";
-      } else {
-        countdownElement.textContent = "行程已結束，快來回顧照片吧 📸";
-      }
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
-</body>
-</html>
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
+ 
