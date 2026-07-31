@@ -29,17 +29,15 @@
       const now = new Date();
 
       if (now < startDate) {
-        // 行程尚未開始 → 顯示距離開始的倒數
         const diffTime = startDate - now;
         const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-        const diffHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const diffMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
-        countdownElement.textContent = `距離出發還有 ${diffDays} 天 ${diffHours} 小時 ${diffMinutes} 分鐘`;
+        const diffHours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
+        const diffMinutes = Math.floor((diffTime / (1000 * 60)) % 60);
+        const diffSeconds = Math.floor((diffTime / 1000) % 60);
+        countdownElement.textContent = `距離出發還有 ${diffDays} 天 ${diffHours} 小時 ${diffMinutes} 分鐘 ${diffSeconds} 秒`;
       } else if (now >= startDate && now <= endDate) {
-        // 行程進行中
         countdownElement.textContent = "行程進行中！好好享受旅遊吧 🎉";
       } else {
-        // 行程已結束
         countdownElement.textContent = "行程已結束，快來回顧照片吧 📸";
       }
     }
