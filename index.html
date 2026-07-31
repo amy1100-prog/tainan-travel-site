@@ -10,19 +10,21 @@
     }
     .schedule {
       margin: 30px auto;
-      width: 80%;
+      width: 90%;
       text-align: left;
       border-collapse: collapse;
     }
     .schedule th, .schedule td {
       border: 1px solid #ccc;
       padding: 10px;
+      vertical-align: top;
     }
     .schedule th {
       background-color: #f0f0f0;
     }
     iframe {
-      margin-top: 20px;
+      width: 100%;
+      height: 250px;
       border: 0;
     }
   </style>
@@ -46,45 +48,25 @@
       <th>日期</th>
       <th>時間</th>
       <th>活動</th>
+      <th>地圖</th>
     </tr>
     <tr>
-      <td rowspan="4">Day 1 (9/5)</td>
-      <td>09:00</td>
-      <td>抵達台南，早餐：阿堂鹹粥</td>
-    </tr>
-    <tr>
-      <td>11:00</td>
-      <td>安平古堡 & 漁人碼頭散步</td>
-    </tr>
-    <tr>
-      <td>14:00</td>
-      <td>午餐：度小月擔仔麵</td>
-    </tr>
-    <tr>
+      <td>Day 1 (9/5)</td>
       <td>19:00</td>
-      <td>花園夜市逛街吃美食</td>
+      <td>住宿：艸祭</td>
+      <td>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.123456789!2d120.213!3d22.993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768123456789%3A0xabcdef123456789!2z6I-v6I-v!5e0!3m2!1szh-TW!2stw!4v1720000000000" allowfullscreen="" loading="lazy"></iframe>
+      </td>
     </tr>
     <tr>
-      <td rowspan="3">Day 2 (9/6)</td>
-      <td>08:00</td>
-      <td>早餐：台南豆花</td>
-    </tr>
-    <tr>
-      <td>10:00</td>
-      <td>奇美博物館參觀</td>
-    </tr>
-    <tr>
-      <td>15:00</td>
-      <td>返回台北</td>
+      <td>Day 2 (9/6)</td>
+      <td>16:00–16:30</td>
+      <td>奇美博物館 VR 體驗</td>
+      <td>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.123456789!2d120.226!3d22.936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768123456789%3A0xabcdef123456789!2z5qiC5p6X5ZyS5Y-w5Y2X!5e0!3m2!1szh-TW!2stw!4v1720000000000" allowfullscreen="" loading="lazy"></iframe>
+      </td>
     </tr>
   </table>
-
-  <!-- Google Maps 嵌入 -->
-  <h2>地圖</h2>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.123456789!2d120.189!3d23.000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768123456789%3A0xabcdef123456789!2z5Y-w5Y2X5Y2A5Y-w!5e0!3m2!1szh-TW!2stw!4v1720000000000"
-    width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
 
   <script>
     const startDate = new Date("2026-09-05T00:00:00");
