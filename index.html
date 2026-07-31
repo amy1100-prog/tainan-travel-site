@@ -37,12 +37,18 @@
       font-size: 16px;
       color: #333;
     }
-    .summary a {
-      color: #007BFF;
+    .calendar-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: #fff;
+      border-radius: 6px;
       text-decoration: none;
+      font-weight: bold;
     }
-    .summary a:hover {
-      text-decoration: underline;
+    .calendar-button:hover {
+      background-color: #0056b3;
     }
     .day-container {
       display: flex;
@@ -58,19 +64,21 @@
       padding: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: left;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
     .day1 {
-      background-color: #e6f2ff; /* 淡藍色 */
+      background-color: #e6f2ff;
     }
     .day1:hover {
-      background-color: #cce6ff; /* hover 深藍 */
+      background-color: #cce6ff;
+      border-color: #3399ff;
     }
     .day2 {
-      background-color: #e6ffe6; /* 淡綠色 */
+      background-color: #e6ffe6;
     }
     .day2:hover {
-      background-color: #ccffcc; /* hover 深綠 */
+      background-color: #ccffcc;
+      border-color: #33cc33;
     }
     .day-section h2 {
       border-left: 5px solid #007BFF;
@@ -86,13 +94,6 @@
       margin: 5px 0 10px;
       color: #555;
     }
-    a.activity-link {
-      color: #007BFF;
-      text-decoration: none;
-    }
-    a.activity-link:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -106,9 +107,13 @@
   <div class="summary">
     <h2>行程摘要</h2>
     <ul>
-      <li><strong><a href="#day1">Day 1 (9/5)：</a></strong> 艸祭 — 住宿 (四人房型)</li>
-      <li><strong><a href="#day2">Day 2 (9/6)：</a></strong> 奇美博物館 — VR 體驗 (16:00–16:30)</li>
+      <li><strong>Day 1 (9/5)：</strong> 艸祭 — 住宿 (四人房型)</li>
+      <li><strong>Day 2 (9/6)：</strong> 奇美博物館 — VR 體驗 (16:00–16:30)</li>
     </ul>
+    <!-- 整個行程加入 Google Calendar -->
+    <a class="calendar-button" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=台南兩天一夜遊&dates=20260905T000000Z/20260906T235900Z&details=完整行程請見：https://amy1100-prog.github.io/tainan-travel-site/&location=台南市" target="_blank">
+      ➕ 整個行程加入 Google 行事曆
+    </a>
   </div>
 
   <!-- Day1 & Day2 並排 -->
@@ -117,9 +122,9 @@
     <div class="day-section day1" id="day1">
       <h2>Day 1 (9/5)</h2>
       <div class="card">
-        <h3><a class="activity-link" href="http://www.caoji.com.tw/caiji/index.php?page=product_shop&p_id=176814" target="_blank">艸祭 — 住宿 (四人房型)</a></h3>
+        <h3>艸祭 — 住宿 (四人房型)</h3>
         <p>時間：19:00</p>
-        <p>地址：<a href="https://maps.google.com/?q=艸祭Bookinn 台南市中西區民族路二段318號" target="_blank">台南市中西區民族路二段318號</a></p>
+        <p>地址：台南市中西區民族路二段318號</p>
       </div>
     </div>
 
@@ -127,9 +132,9 @@
     <div class="day-section day2" id="day2">
       <h2>Day 2 (9/6)</h2>
       <div class="card">
-        <h3><a class="activity-link" href="https://www.chimeimuseum.org/event/691aeece01a23" target="_blank">奇美博物館 — VR 體驗</a></h3>
+        <h3>奇美博物館 — VR 體驗</h3>
         <p>時間：16:00–16:30</p>
-        <p>地址：<a href="https://maps.google.com/?q=奇美博物館 台南市仁德區文華路二段66號" target="_blank">台南市仁德區文華路二段66號</a></p>
+        <p>地址：台南市仁德區文華路二段66號</p>
       </div>
     </div>
   </div>
