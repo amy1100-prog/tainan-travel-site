@@ -39,28 +39,26 @@
     .summary a:hover {
       text-decoration: underline;
     }
-    .day-section {
+    .day-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
       margin: 40px auto;
       width: 90%;
+    }
+    .day-section {
+      flex: 1 1 45%;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: left;
     }
     .day-section h2 {
       border-left: 5px solid #007BFF;
       padding-left: 10px;
       color: #333;
-    }
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .card {
-      flex: 1 1 calc(50% - 20px);
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     .card img {
       width: 100%;
@@ -108,23 +106,22 @@
   <!-- 倒數顯示區 -->
   <p id="countdown" style="color:blue; font-size:18px;"></p>
 
-  <!-- Day 1 -->
-  <div class="day-section" id="day1">
-    <h2>Day 1 (9/5)</h2>
-    <div class="card-container">
+  <!-- Day1 & Day2 並排 -->
+  <div class="day-container">
+    <!-- Day 1 -->
+    <div class="day-section" id="day1">
+      <h2>Day 1 (9/5)</h2>
       <div class="card">
-        <img src="http://www.caoji.com.tw/caiji/product/bimg/pro3_20180123171309.jpg" alt="艸祭四人房型">
+        <img src="images/caiji-room.jpg" alt="艸祭四人房型">
         <h3><a class="activity-link" href="http://www.caoji.com.tw/caiji/index.php?page=product_shop&p_id=176814" target="_blank">艸祭 — 住宿 (四人房型)</a></h3>
         <p>時間：19:00</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9312648174055!2d120.20225807588072!3d22.989554917558397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767d5997e87f%3A0x8674e82b188d84e7!2z6Im456WtQm9vayBpbm4!5e0!3m2!1szh-TW!2sus!4v1785465322688!5m2!1szh-TW!2sus" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
-  </div>
 
-  <!-- Day 2 -->
-  <div class="day-section" id="day2">
-    <h2>Day 2 (9/6)</h2>
-    <div class="card-container">
+    <!-- Day 2 -->
+    <div class="day-section" id="day2">
+      <h2>Day 2 (9/6)</h2>
       <div class="card">
         <img src="https://www.chimeimuseum.org/uploads/photos/shares/691aef48c8b43.jpg" alt="奇美博物館 VR 體驗">
         <h3><a class="activity-link" href="https://www.chimeimuseum.org/event/691aeece01a23" target="_blank">奇美博物館 — VR 體驗</a></h3>
