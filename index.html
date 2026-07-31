@@ -7,25 +7,46 @@
     body {
       text-align: center;
       font-family: sans-serif;
+      background-color: #fafafa;
     }
-    .schedule {
-      margin: 30px auto;
-      width: 90%;
+    .day-section {
+      margin: 40px auto;
+      width: 80%;
       text-align: left;
-      border-collapse: collapse;
     }
-    .schedule th, .schedule td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      vertical-align: top;
+    .day-section h2 {
+      border-left: 5px solid #007BFF;
+      padding-left: 10px;
+      color: #333;
     }
-    .schedule th {
-      background-color: #f0f0f0;
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #007BFF;
+    }
+    .card p {
+      margin: 5px 0;
+      color: #555;
     }
     iframe {
-      width: 220px;   /* 地圖縮小 */
-      height: 150px;
+      width: 100%;
+      height: 250px;
       border: 0;
+      border-radius: 6px;
+      margin-top: 10px;
     }
     a.activity-link {
       color: #007BFF;
@@ -43,45 +64,32 @@
   <!-- 倒數顯示區 -->
   <p id="countdown" style="color:blue; font-size:18px;"></p>
 
-  <!-- Google 行事曆按鈕（全天事件版本） -->
+  <!-- Google 行事曆按鈕 -->
   <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E5%8F%B0%E5%8D%97%E5%85%A9%E5%A4%A9%E4%B8%80%E5%A4%9C%E9%81%8A&dates=20260905/20260907&details=%E6%9F%A5%E7%9C%8B%E8%A1%8C%E7%A8%8B%E7%B6%B2%E7%AB%99%EF%BC%9Ahttps%3A%2F%2Famy1100-prog.github.io%2Ftainan-travel-site%2F" target="_blank">
     <button style="padding:10px 20px; font-size:16px;">加入 Google 行事曆</button>
   </a>
 
-  <!-- 行程表區塊 -->
-  <h2>行程表</h2>
-  <table class="schedule">
-    <tr>
-      <th>日期</th>
-      <th>時間</th>
-      <th>活動</th>
-      <th>地圖</th>
-    </tr>
-    <tr>
-      <td>Day 1 (9/5)</td>
-      <td>19:00</td>
-      <td>
-        <a class="activity-link" href="http://www.caoji.com.tw/caiji/index.php?page=product_shop&p_id=176814" target="_blank">
-          艸祭 — 住宿 (四人房型)
-        </a>
-      </td>
-      <td>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.123456789!2d120.213!3d22.993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768123456789%3A0xabcdef123456789!2z艸祭!5e0!3m2!1szh-TW!2stw!4v1720000000000" allowfullscreen="" loading="lazy"></iframe>
-      </td>
-    </tr>
-    <tr>
-      <td>Day 2 (9/6)</td>
-      <td>16:00–16:30</td>
-      <td>
-        <a class="activity-link" href="https://www.chimeimuseum.org/event/691aeece01a23" target="_blank">
-          奇美博物館 — VR 體驗
-        </a>
-      </td>
-      <td>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.123456789!2d120.226!3d22.936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e768123456789%3A0xabcdef123456789!2z奇美博物館!5e0!3m2!1szh-TW!2stw!4v1720000000000" allowfullscreen="" loading="lazy"></iframe>
-      </td>
-    </tr>
-  </table>
+  <!-- Day 1 -->
+  <div class="day-section">
+    <h2>Day 1 (9/5)</h2>
+    <div class="card">
+      <img src="https://www.caoji.com.tw/caiji/images/product/176814.jpg" alt="艸祭四人房型">
+      <h3><a class="activity-link" href="http://www.caoji.com.tw/caiji/index.php?page=product_shop&p_id=176814" target="_blank">艸祭 — 住宿 (四人房型)</a></h3>
+      <p>時間：19:00</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9312648174055!2d120.20225807588072!3d22.989554917558397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767d5997e87f%3A0x8674e82b188d84e7!2z6Im456WtQm9vayBpbm4!5e0!3m2!1szh-TW!2sus!4v1785465322688!5m2!1szh-TW!2sus" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day-section">
+    <h2>Day 2 (9/6)</h2>
+    <div class="card">
+      <img src="https://www.chimeimuseum.org/sites/default/files/styles/large/public/2024-01/vr-event.jpg" alt="奇美博物館 VR 體驗">
+      <h3><a class="activity-link" href="https://www.chimeimuseum.org/event/691aeece01a23" target="_blank">奇美博物館 — VR 體驗</a></h3>
+      <p>時間：16:00–16:30</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.4251174367864!2d120.22345187587956!3d22.93456571960558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e747aaaaaaaab%3A0xa88c13e665c7f4a6!2z5aWH576O5Y2a54mp6aSo!5e0!3m2!1szh-TW!2sus!4v1785465418778!5m2!1szh-TW!2sus" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
 
   <script>
     const startDate = new Date("2026-09-05T00:00:00");
